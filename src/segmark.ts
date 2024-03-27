@@ -55,7 +55,7 @@ const segmark: Segmark = async (markdownStr, isUri = false) => {
     }
   }
 
-  return markdownSections.length !== 0 ? obj : { markdown: markdownStr.trim() };
+  return markdownSections.length !== 0 ? obj : markdownStr.trim();
 };
 
 export { segmark };
