@@ -1,8 +1,9 @@
-# Segmark
+# Segmark ![check-code-coverage](https://img.shields.io/badge/code--coverage-100%25-brightgreen)
 
 ## Introduction
 If you want to build component based architectures, sometimes you need copy for different components but don't want to
-call lots of different markdown files. Segmark allows to use one markdown file subdivide markdown into fragments.
+call lots of different markdown files. Segmark allows you to use one markdown file subdivide markdown into 
+segments/fragments.
 
 The idea is to fetch your markdown with an API request and push the response string through Segmark, or have Segmark
 fetch it for you if you prefer. It will return an object containing as many segments as you've specified in your

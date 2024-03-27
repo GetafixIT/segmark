@@ -17,7 +17,9 @@
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags",
-    "minify": "uglifyjs lib/segmark.js -c -m -o lib/segmark.min.js"
+    "minify": "uglifyjs lib/segmark.js -c -m -o lib/segmark.min.js",
+    "updateCoverageBadge": "update-badge",
+    "publish": "npm publish"
   },
   "files": [
     "lib/**/*"
@@ -39,6 +41,7 @@
   "devDependencies": {
     "@types/jest": "^28.1.4",
     "@types/node": "^18.0.0",
+    "check-code-coverage": "^1.10.5",
     "eslint-plugin-import": "^2.26.0",
     "jest": "^28.1.2",
     "jest-environment-jsdom": "^28.1.2",
