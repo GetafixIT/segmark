@@ -1,6 +1,6 @@
 {
   "name": "segmark",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A markdown string parser",
   "main": "lib/segmark.min.js",
   "types": "lib/segmark.d.ts",
