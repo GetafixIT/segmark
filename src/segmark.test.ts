@@ -93,7 +93,7 @@ describe('Function "segmark"', () => {
 
     (fetch as jest.Mock).mockImplementation(() =>
       Promise.resolve({
-        json: async () => Promise.resolve(markdownStrResp),
+        text: async () => Promise.resolve(markdownStrResp),
       }),
     );
 
@@ -136,7 +136,7 @@ describe('Function "segmark"', () => {
 
     (fetch as jest.Mock).mockImplementation(() =>
       Promise.resolve({
-        json: async () => Promise.resolve(mardownStr),
+        text: async () => Promise.resolve(mardownStr),
       }),
     );
 

@@ -7,8 +7,9 @@ import { default as matter } from 'gray-matter';
 const getApiData = async (url: string) => {
   try {
     const resp = await fetch(url);
-    return await resp.json();
+    return await resp.text();
   } catch (err) {
+    // console.error(err);
     return `${url}`;
   }
 };
@@ -19,9 +20,10 @@ const segmark: Segmark = async (markdownStr, isUri = false) => {
 
   if (isUri) {
     stringToProcess = await getApiData(markdownStr);
-  } else {
-    greyMatterData = matter(markdownStr);
   }
+
+  greyMatterData = matter(isUri ? stringToProcess : markdownStr);
+
   const regexSection = new RegExp(`(±.*?)[\\s\\S]*?\\1`, 'gi');
   const markdownSections: null | string[] = stringToProcess.match(regexSection) || [];
   const obj: { [x: string]: string | { [x: string]: string } } = {
